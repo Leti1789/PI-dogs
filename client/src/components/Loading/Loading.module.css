@@ -1,0 +1,85 @@
+.loadingContainer {
+  margin-top: 16rem;
+  /* position: absolute; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "newtons__cradle"
+    "newtons__cradle"
+    "newtons__cradle";
+  justify-content: center;
+  align-items: center;
+
+}
+
+.newtons__cradle {
+  --uib-size: 40px;
+  --uib-speed: 1.4s;
+  --uib-color: #4d774e;
+  grid-area: newtons__cradle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--uib-size);
+  height: var(--uib-size);
+}
+
+.newtons__cradleDot {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  transform-origin: center top;
+}
+
+.newtons__cradleDot::after {
+  content: '';
+  /* display: block; */
+  width: 100%;
+  height: 25%;
+  border-radius: 50%;
+  background-color: var(--uib-color);
+}
+
+.newtons__cradleDot:first-child {
+  animation: swing var(--uib-speed) linear infinite;
+}
+
+.newtons__cradleDot:last-child {
+  animation: swing2 var(--uib-speed) linear infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  25% {
+    transform: rotate(70deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes swing2 {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  75% {
+    transform: rotate(-70deg);
+    animation-timing-function: ease-in;
+  }
+}

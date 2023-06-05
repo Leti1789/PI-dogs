@@ -1,0 +1,118 @@
+.nav {
+
+    width: 100vw;
+    z-index: 5;
+    box-shadow: 0 0 10px #000;
+    position: fixed;
+    height: 8rem;
+    top: 0;
+    background: rgba(157, 200, 141, 0.8);
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "logo navLinks  searchBar_box"
+        "logo  navLinks  searchBar_box"
+        "logo  navLinks  searchBar_box"
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+
+.searchBar_box {
+    grid-area: searchBar_box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.searchBar_box input {
+    padding: 0.625rem;
+    padding-right: 2.188rem;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+.searchBar_box button {
+    background-color: #f1b24a;
+    padding: 0.625rem 0.938rem;
+    position: relative;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.searchBar_box button:hover {
+    background-color: #4d774e;
+    color: #f1b24a;
+}
+
+
+
+.navLinks {
+    grid-area: navLinks;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.navLinks .navItems {
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.link {
+    text-decoration: none;
+    color: #4d774e;
+    padding: 1.125rem;
+}
+
+.linkLogo {
+    text-decoration: none;
+    padding: 1.125rem;
+    color: #fff;
+}
+
+
+.navItems .link:hover {
+    border-bottom: 3px solid #f1b24a;
+}
+
+@media(max-width: 868px) {
+    .nav {
+        height: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "logo navLinks"
+            "searchBar_box searchBar_box ";
+
+    }
+
+    .searchBar_box {
+        /* margin-top: 0.625rem; */
+    }
+
+
+}

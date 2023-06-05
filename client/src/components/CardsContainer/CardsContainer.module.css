@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.containerCards {
+    margin-top: 6.8rem;
+    margin-bottom: 0;
+    background: linear-gradient(45deg, #164a41, #9dc88d);
+    background-size: 300%, 300%;
+    display: grid;
+    /* grid-gap:5px; */
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "containerFilter"
+        "containerDogs"
+        "containerPaginado"
+
+}
+
+.containerFilter {
+    background-color: #164a41;
+    /* grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row: span 1; */
+    padding: 20px;
+    grid-area: containerFilter;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "orderAlfa orderWeight temperament origen";
+}
+
+
+.containerFilter .orderAlfa {
+    /* grid-column: 1/2;
+    grid-row: span 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0.313rem;
+    grid-area: orderAlfa;
+}
+
+
+.containerFilter .orderAlfa select {
+    background-color: #164a41;
+    margin: 10px;
+    padding: 15px;
+    color: #9dc88d;
+    border: 1px solid #9dc88d;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.containerFilter .orderWeight {
+    /* grid-column: 2/3;
+    grid-row: span 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0.313rem;
+    grid-area: orderWeight;
+}
+
+
+.containerFilter .orderWeight select {
+    background-color: #164a41;
+    margin: 10px;
+    padding: 15px;
+    color: #9dc88d;
+    border: 1px solid #9dc88d;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.containerFilter .temperament {
+    /* grid-column: 3/4;
+    grid-row: span 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0.313rem;
+    grid-area: temperament;
+}
+
+
+
+.containerFilter .temperament select {
+    background-color: #164a41;
+    margin: 10px;
+    padding: 15px;
+    color: #9dc88d;
+    border: 1px solid #9dc88d;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+
+
+.containerFilter .origen {
+    /* grid-column: 4/5;
+    grid-row: span 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0.313rem;
+    grid-area: origen;
+}
+
+
+
+.containerFilter .origen select {
+    background-color: #164a41;
+    margin: 10px;
+    padding: 15px;
+    color: #9dc88d;
+    border: 1px solid #9dc88d;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+
+
+
+
+
+.containerDogs {
+    /* background-color: blue; */
+    /* grid-column: 1/-1;
+    grid-row: span 2; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 20px 0 20px;
+    background: linear-gradient(45deg, #164a41, #9dc88d);
+    background-size: 300%, 300%;
+}
+
+.containerPaginado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    /* grid-column: 1/-1;
+    grid-row: span 1; */
+    background: linear-gradient(45deg, #164a41, #9dc88d);
+    background-size: 300%, 300%;
+}
+
+
+@media(max-width: 768px) {
+    .containerFilter {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "orderAlfa"
+            "orderWeight"
+            "temperament"
+            "origen";
+    }
+
+    .containerCards {
+        margin-top: 8.8rem;
+    }
+
+    .containerFilter .temperament {
+        border-bottom: 3px solid #9dc88d;
+
+    }
+
+    .containerFilter .origen {
+        border-bottom: 3px solid #9dc88d;
+
+    }
+
+    .containerFilter .orderWeight {
+        border-bottom: 3px solid #9dc88d;
+    }
+
+    .containerFilter .orderAlfa {
+
+        border-bottom: 3px solid #9dc88d;
+
+    }
+}
